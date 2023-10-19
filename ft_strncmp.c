@@ -6,7 +6,7 @@
 /*   By: gamoraes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:08:14 by gamoraes          #+#    #+#             */
-/*   Updated: 2023/10/17 16:34:36 by gamoraes         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:51:01 by gamoraes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t length)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	if (length == 0)

@@ -14,11 +14,15 @@
 
 int	ft_strncmp(const char *string1, const char *string2, size_t length)
 {
-	while (length > 0 && *string1 && *string2 && *string1 == *string2)
+	size_t count;
+
+	count = 0;
+	if (length == 0)
+		return (0);
+	while ((string1[count] || string2[count]) && length-- > 0)
 	{
-		string1++;
-		string2++;
-		length--;
+		if (string1[count] != string2[count])
+			return (string1[count] - string2[count]);
+		count++;
 	}
-	return (*string1 - *string2);
 }

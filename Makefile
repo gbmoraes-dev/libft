@@ -5,7 +5,8 @@ SOURCES += ft_isascii.c ft_isprint.c ft_strlen.c
 SOURCES += ft_tolower.c ft_toupper.c
 SOURCES += ft_memset.c ft_bzero.c ft_memcpy.c
 SOURCES += ft_memmove.c ft_strncmp.c ft_strlcpy.c
-SOURCES += ft_strchr.c ft_strrchr.c
+SOURCES += ft_strchr.c ft_strrchr.c ft_memchr.c
+SOURCES += ft_strnstr.c
 
 OBJECTS = ${SOURCES:.c=.o}
 

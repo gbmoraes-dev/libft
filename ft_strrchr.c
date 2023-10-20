@@ -6,7 +6,7 @@
 /*   By: gamoraes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 15:42:55 by gamoraes          #+#    #+#             */
-/*   Updated: 2023/10/19 17:45:45 by gamoraes         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:55:52 by gamoraes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 char	*ft_strrchr(const char *string, int character)
 {
-	const char	*last_occurrence;
+	int	length;
 
-	last_occurrence = NULL;
-	while (*string)
+	length = ft_strlen(string);
+	while (length >= 0)
 	{
-		if (*string == character)
-			last_occurrence = string;
-		string++;
+		if (string[length] == character)
+			return ((char *) string + length);
+		length--;
 	}
-	if (*last_occurrence == character)
-		return ((char *)last_occurrence);
 	return (0);
 }

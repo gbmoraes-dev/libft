@@ -6,7 +6,7 @@
 /*   By: gamoraes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:18:12 by gamoraes          #+#    #+#             */
-/*   Updated: 2023/10/23 17:24:41 by gamoraes         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:22:23 by gamoraes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+
+/*
+** Part 1 Functions
+*/
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *string, size_t length);
@@ -36,8 +40,24 @@ size_t	ft_strlen(const char *string);
 char	*ft_strnstr(const char *big, const char *little, size_t length);
 char	*ft_strrchr(const char *string, int character);
 char	*ft_strchr(const char *string, int character);
-int		ft_strncmp(const char *string1, const char *string2, size_t length);
+int		ft_strncmp(const char *s1, const char *s2, size_t length);
 int		ft_tolower(int character);
 int		ft_toupper(int character);
+
+/*
+** Part 2 Functions
+*/
+
+char	*ft_substr(char const *string, unsigned int start, size_t length);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *string, char character);
+char	*ft_itoa(int number);
+char	*ft_strmapi(char const *string, char (*f)(unsigned int, char));
+void	ft_striteri(char *string, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char character, int fd);
+void	ft_putstr_fd(char *string, int fd);
+void	ft_putendl_fd(char *string, int fd);
+void	ft_putnbr_fd(int number, int fd);
 
 #endif

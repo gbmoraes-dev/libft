@@ -8,6 +8,7 @@ SOURCES += ft_memmove.c ft_strncmp.c ft_strlcpy.c
 SOURCES += ft_strchr.c ft_strrchr.c ft_memchr.c
 SOURCES += ft_strnstr.c ft_memcmp.c ft_strlcat.c
 SOURCES += ft_strdup.c ft_calloc.c ft_atoi.c
+SOURCES += ft_substr.c
 
 OBJECTS = ${SOURCES:.c=.o}
 
@@ -15,7 +16,7 @@ INCLUDES = libft.h
 
 RM = @rm -f
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 MSG1 = @echo "42@compile ✔️\nCompiled and now is working! 🚂💨"
@@ -33,7 +34,7 @@ $(NAME):	${OBJECTS}
 all: ${NAME}
 
 clean:
-		${RM}	${OBJECTS}	${BONUS_OBJECTS}
+		${RM}	${OBJECTS}
 		${MSG2}
 
 fclean: clean

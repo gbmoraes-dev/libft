@@ -8,7 +8,7 @@ SOURCES += ft_memmove.c ft_strncmp.c ft_strlcpy.c
 SOURCES += ft_strchr.c ft_strrchr.c ft_memchr.c
 SOURCES += ft_strnstr.c ft_memcmp.c ft_strlcat.c
 SOURCES += ft_strdup.c ft_calloc.c ft_atoi.c
-SOURCES += ft_substr.c
+SOURCES += ft_substr.c ft_strjoin.c ft_strtrim.c
 
 OBJECTS = ${SOURCES:.c=.o}
 

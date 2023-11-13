@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gamoraes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 13:09:28 by gamoraes          #+#    #+#             */
-/*   Updated: 2023/11/09 03:14:06 by gamoraes         ###   ########.fr       */
+/*   Created: 2023/11/07 14:08:34 by gamoraes          #+#    #+#             */
+/*   Updated: 2023/11/07 14:09:42 by gamoraes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t length)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	char	*s;
+	long int	number;
 
-	i = 0;
-	j = 0;
-	s = (char *)haystack;
-	if (*needle == '\0')
-		return (s);
-	while ((i < length) && (s[i]))
+	number = n;
+	if (number < 0)
 	{
-		k = i;
-		while (needle[j] && (k < length) && (s[k] == needle[j]))
-		{
-			if (needle[j + 1] == '\0')
-				return (&s[i]);
-			k++;
-			j++;
-		}
-		j = 0;
-		i++;
+		ft_putchar_fd('-', fd);
+		number *= -1;
 	}
-	return (NULL);
+	if (number <= 9)
+		return (ft_putchar_fd((number % 10) + '0', fd));
+	ft_putnbr_fd(number / 10, fd);
+	ft_putchar_fd((number % 10) + '0', fd);
 }

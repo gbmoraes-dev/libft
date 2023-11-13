@@ -18,11 +18,9 @@ char	*ft_strdup(const char *string)
 	size_t	count;
 	char	*dest;
 
-	if (!string)
-		return (NULL);
 	length = ft_strlen(string);
 	dest = (char *)ft_calloc((length + 1), sizeof(char));
-	if (dest == NULL)
+	if (!dest)
 		return (NULL);
 	count = 0;
 	while (count < length + 1)

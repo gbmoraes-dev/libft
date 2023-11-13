@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gamoraes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 04:02:32 by gamoraes          #+#    #+#             */
-/*   Updated: 2023/11/05 04:02:41 by gamoraes         ###   ########.fr       */
+/*   Created: 2023/11/09 03:11:12 by gamoraes          #+#    #+#             */
+/*   Updated: 2023/11/09 03:13:34 by gamoraes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*strjoin;
-	size_t	totalsize;
+	t_list	*newlst;
+	t_list	*newnode;
 
-	if (!s1 || !s2)
+	if (!lst || !f || !del)
 		return (NULL);
-	totalsize = ft_strlen(s1) + ft_strlen(s2);
-	strjoin = (char *)ft_calloc((totalsize + 1), sizeof(char));
-	if (!strjoin)
-		return (NULL);
-	while (s1 && *s1 != '\0')
-		*strjoin++ = *s1++;
-	while (s2 && *s2 != '\0')
-		*strjoin++ = *s2++;
-	*strjoin = '\0';
-	return ((strjoin - totalsize));
+	newlst = NULL;
+	while (lst)
+	{
+		newnode = ft_lstnew((*f)(lst->content));
+		if (!newnode)
+		{
+			while (newlst)
+			{
+				newnode = newlst->next;
+				ft_lstdelone(lst, del);
+				newlst = newnode;
+			}
+			lst = NULL;
+			return (NULL);
+		}
+		ft_lstadd_back(&newlst, newnode);
+		lst = lst->next;
+	}
+	return (newlst);
 }

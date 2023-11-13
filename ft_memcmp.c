@@ -23,10 +23,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t length)
 	count = 0;
 	if (length == 0)
 		return (0);
-	while ((aux1[count] || aux2[count]) && length-- > 0)
+	while (count < length)
 	{
 		if (aux1[count] != aux2[count])
-			return ((unsigned char)aux1[count] - (unsigned char)aux2[count]);
+			return (aux1[count] - aux2[count]);
 		count++;
 	}
 	return (0);

@@ -1,8 +1,8 @@
-# :books: Libft | 42 SP
+# :books: Libft | 42 RIO
 - Actual Status : finished.
 - Result        : Result : Approved with 125 points by moulinette (the 42 tester) ✅
 
-The libft (42 Library) is the first project in the software engineering curriculum at 42 São Paulo. The objective of the project is to create your first C library by re-creating functions from the standard C library. During the project, you will learn how these functions work, how to implement them, and how to use each one. To submit the project, you must create a Makefile that compiles your library without relinking.
+The libft (42 Library) is the first project in the software engineering curriculum at 42 Rio. The objective of the project is to create your first C library by re-creating functions from the standard C library. During the project, you will learn how these functions work, how to implement them, and how to use each one. To submit the project, you must create a Makefile that compiles your library without relinking.
 
 Upon completing the mandatory part of the project, you are encouraged to do the bonus part, which involves learning about linked lists, how to create them, and how to manipulate them.
 
@@ -75,7 +75,7 @@ Bonus functions to implement
 In order to use this static library in your project, you must download this repository into your pc and compile the library
 
 ``` shell
-$> git clone https://github.com/NataliMRocha/Libft.git
+$> git clone https://github.com/gbmoraes-dev/Libft.git
 $> cd Libft
 $> make
 $> make bonus

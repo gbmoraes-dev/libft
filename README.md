@@ -75,8 +75,8 @@ Bonus functions to implement
 In order to use this static library in your project, you must download this repository into your pc and compile the library
 
 ``` shell
-$> git clone https://github.com/gbmoraes-dev/Libft.git
-$> cd Libft
+$> git clone https://github.com/gbmoraes-dev/libft.git
+$> cd libft
 $> make
 $> make bonus
 ```

@@ -1,12 +1,20 @@
-# :books: Libft | 42 RIO
-- Actual Status : finished.
-- Result        : Result : Approved with 125 points by moulinette (the 42 tester) ✅
+<p align="center">
+<img src="https://github.com/ayogun/42-project-badges/blob/main/badges/libftm.png" />
+</p>
 
+<h1 align="center">:books: Libft | 42 RIO</h1>
+<p align="center">- Actual Status : finished.</p>
+<p align="center">- Result        :  Approved with 125 points by moulinette (the 42 tester) ✅</p>
+
+<p align="center">
 The libft (42 Library) is the first project in the software engineering curriculum at 42 Rio. The objective of the project is to create your first C library by re-creating functions from the standard C library. During the project, you will learn how these functions work, how to implement them, and how to use each one. To submit the project, you must create a Makefile that compiles your library without relinking.
+</p>
 
+<p align="center">
 Upon completing the mandatory part of the project, you are encouraged to do the bonus part, which involves learning about linked lists, how to create them, and how to manipulate them.
+</p>
 
-## 📝 Functions
+<h1 align="center">📝 Functions</h1>
 
 | Function | Description |
 | :------: | :---------: |
@@ -46,8 +54,10 @@ Upon completing the mandatory part of the project, you are encouraged to do the 
 | ``ft_tolower`` | Convert uppercase letters to lowercase. |
 | ``ft_toupper`` | Convert lowercase letters to uppercase. |
 
-## :star: Bonus
-For this part we implemented a struct defining the well-known linked lists
+<h1 align="center">:star: Bonus</h1>
+
+<p align="center">For this part we implemented a struct defining the well-known linked lists:</p>
+
 ```C
 typedef	struct	s_list
 {
@@ -56,7 +66,7 @@ typedef	struct	s_list
 }			t_list;
 ```
 
-Bonus functions to implement
+<p align="center">Bonus functions to implement:</p>
 
 | Bonus Function | Description |
 | :------------: | :---------: |
@@ -70,9 +80,9 @@ Bonus functions to implement
 | ``ft_lstiter`` | Iterates the list ``lst`` and applies the function ``f`` on the content of each node. |
 | ``ft_lstmap`` | Creates a new list resulting of the successive applications of the function ``f``. Use ``del`` if you need to delete the content. |
 
-## 🛠️ Usage
+<h1 align="center">🛠️ Usage</h1>
 
-In order to use this static library in your project, you must download this repository into your pc and compile the library
+<p align="center">In order to use this static library in your project, you must download this repository into your pc and compile the library:</p>
 
 ``` shell
 $> git clone https://github.com/gbmoraes-dev/libft.git
@@ -81,13 +91,13 @@ $> make
 $> make bonus
 ```
 
-In your code, simply include its header:
+<p align="center">In your code, simply include its header:</p>
 
 ``` C
 #include "libft.h"
 ```
 
-And, when compiling your code, add the required flags:
+<p align="center">And, when compiling your code, add the required flags:</p>
 
 ``` shell
 $> -L ./libft -lft
